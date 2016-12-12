@@ -45,6 +45,5 @@ int main(void)
 	}
 
 	fclose(historique);	//on ferme le .txt
-
 	return(0);
 }
