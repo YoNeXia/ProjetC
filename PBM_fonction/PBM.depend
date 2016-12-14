@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1481621032 source:/home/thomas-le-saux/Bureau/Prog test/PBM/PBM/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<unistd.h>
+
