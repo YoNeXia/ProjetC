@@ -26,7 +26,12 @@ struct Pbm // définition de notre structure Pbm
 
 
 
-struct termios ancien_terminal;
+
+int getch(void);
+char touche();
+
+
+
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
@@ -39,10 +44,7 @@ void insererImageCentreeDansTableau(char *fichier, Pbm* pointeur_structure, int 
 void afficherTableau(int tableau_pour_image[80][24]);
 
 
-int modeBrut (int variable);
-int ReinitialisationTerminal (int variable);
-void sigcatch(int sig);
-void quitterEnAppuyantSurUneTouche();
+
 
 
 int statique();
