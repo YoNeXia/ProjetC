@@ -8,15 +8,8 @@
 typedef struct Coordonnees Coordonnees;
 struct Coordonnees
 {
-    int x;
-    int y;
-};
-
-typedef struct Avion Avion;
-struct Avion
-{
-    int x;
-    int y;
+    int X;
+    int Y;
 };
 
 typedef struct Pbm Pbm;
@@ -31,12 +24,10 @@ int main()
 {
     int tableauCiel[80][24] = {0};
     int tableauAvion[10][10] = {0};
-    int compteurX;
-    int compteurY;
     char toucheClavier;
+    Coordonnees pos;
 
     Pbm image;
-    Avion avion;
     Coordonnees position;
 
     FILE* fichier_1 = NULL;
@@ -54,7 +45,7 @@ int main()
 
         lireResolutionImage(fichier_2, &image);
         chargerImageAvion(fichier_2, &image, tableauAvion);
-        integrerAvionDansCiel(tableauCiel, tableauAvion, &compteurX);
+        integrerAvionDansCiel(tableauCiel, tableauAvion, &pos);
         afficherTableauCiel(tableauCiel);
 
 
@@ -67,12 +58,12 @@ int main()
             {
                 fichier_1 = fopen("Avion Droite.pbm", "r");
                 system("clear");
-                compteurX++;
+                pos.X++;
                 //memset (tableauCiel, 0, sizeof (tableauCiel));
                 clearTableauCiel(tableauCiel);
                 lireResolutionImage(fichier_1, &image);
                 chargerImageAvion(fichier_1, &image, tableauAvion);
-                integrerAvionDansCiel(tableauCiel, tableauAvion, &compteurX, &compteurY);
+                integrerAvionDansCiel(tableauCiel, tableauAvion, &pos);
                 afficherTableauCiel(tableauCiel);
                 fclose(fichier_1);
                 }
@@ -87,12 +78,13 @@ int main()
             {
                 fichier_2 = fopen("Avion Gauche.pbm", "r");
                 system("clear");
-                compteurX--;
+                pos.X--;
+                pos.X = (pos.X+80)%80;
                 //memset (tableauCiel, 0, sizeof (tableauCiel));
                 clearTableauCiel(tableauCiel);
                 lireResolutionImage(fichier_2, &image);
                 chargerImageAvion(fichier_2, &image, tableauAvion);
-                integrerAvionDansCiel(tableauCiel, tableauAvion, &compteurX, &compteurY);
+                integrerAvionDansCiel(tableauCiel, tableauAvion, &pos);
                 afficherTableauCiel(tableauCiel);
                 fclose(fichier_2);
                 }
@@ -107,12 +99,12 @@ int main()
             {
                 fichier_3 = fopen("Avion Haut.pbm", "r");
                 system("clear");
-                compteurY--;
+                pos.Y--;
                 //memset (tableauCiel, 0, sizeof (tableauCiel));
                 clearTableauCiel(tableauCiel);
                 lireResolutionImage(fichier_3, &image);
                 chargerImageAvion(fichier_3, &image, tableauAvion);
-                integrerAvionDansCiel(tableauCiel, tableauAvion, &compteurX, &compteurY);
+                integrerAvionDansCiel(tableauCiel, tableauAvion, &pos);
                 afficherTableauCiel(tableauCiel);
                 fclose(fichier_3);
                 }
@@ -127,12 +119,12 @@ int main()
             {
                 fichier_4 = fopen("Avion Bas.pbm", "r");
                 system("clear");
-                compteurY++;
+                pos.Y++;
                 //memset (tableauCiel, 0, sizeof (tableauCiel));
                 clearTableauCiel(tableauCiel);
                 lireResolutionImage(fichier_4, &image);
                 chargerImageAvion(fichier_4, &image, tableauAvion);
-                integrerAvionDansCiel(tableauCiel, tableauAvion, &compteurX, &compteurY);
+                integrerAvionDansCiel(tableauCiel, tableauAvion, &pos);
                 afficherTableauCiel(tableauCiel);
                 fclose(fichier_4);
                 }
@@ -181,13 +173,13 @@ void chargerImageAvion(char *fichier, Pbm* p, int tableauAvion[10][10])
     }
 }
 
-void integrerAvionDansCiel(int tableauCiel[80][24], int tableauAvion[10][10], int *pointeurCompteurX, int *pointeurCompteurY)
+void integrerAvionDansCiel(int tableauCiel[80][24], int tableauAvion[10][10], Coordonnees* p)
 {
     for (int i = 0; i < 10; i++)
     {
         for (int j = 0;j < 10; j++)
         {
-            tableauCiel[j + (*pointeurCompteurX)%80][i + (*pointeurCompteurY)%24] = tableauAvion[j][i];
+            tableauCiel[j + (p->X)%80][i + (p->Y)%24] = tableauAvion[j][i];
         }
     }
 }
