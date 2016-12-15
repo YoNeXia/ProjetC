@@ -13,9 +13,9 @@ void Afficher_heure ()
     char temps [100];
 
 
-    actuel = time(NULL); /* Récupération du temps */
+    actuel = time(NULL); // Récupération du temps 
     ts = localtime(&actuel);
-    strftime (temps, sizeof(temps), " %H:%M:%S ", ts);
+    strftime (temps, sizeof(temps), " %H:%M:%S ", ts); //commande permettant d'afficher l'heure de la VM en format HH:MM:SS
     printf("\n");
     printf("\n");
     printf("\n");
@@ -38,9 +38,9 @@ void Actualisation_heure ()
     while (i < 5)
     {
 
-        sleep (1);
+        sleep (1); //pause de 1sec entre chaque point
         printf (" . ");
-        fflush (stdout);
+        fflush (stdout); //fflush(stdout) consister à forcer l'affichage
 
         i ++;
 
