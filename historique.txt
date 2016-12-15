@@ -1,0 +1,35 @@
+dynamique Thu Dec 15 09:04:38 2016
+dynamique Thu Dec 15 09:04:39 2016
+dynamique Thu Dec 15 09:04:39 2016
+dynamique Thu Dec 15 09:04:40 2016
+image3 Thu Dec 15 09:04:41 2016
+statique image5 Thu Dec 15 09:04:43 2016
+statique dynamique Thu Dec 15 09:04:44 2016
+interactif Thu Dec 15 09:04:45 2016
+dynamique Thu Dec 15 09:04:46 2016
+image1 Thu Dec 15 09:04:47 2016
+statique dynamique Thu Dec 15 09:06:17 2016
+interactif Thu Dec 15 09:06:18 2016
+image3 Thu Dec 15 09:06:19 2016
+statique interactif Thu Dec 15 09:06:21 2016
+dynamique Thu Dec 15 09:06:23 2016
+dynamique Thu Dec 15 09:06:24 2016
+dynamique Thu Dec 15 09:06:25 2016
+dynamique Thu Dec 15 09:06:26 2016
+dynamique Thu Dec 15 09:06:27 2016
+dynamique Thu Dec 15 09:06:27 2016
+dynamique Thu Dec 15 09:06:28 2016
+dynamique Thu Dec 15 09:06:28 2016
+dynamique Thu Dec 15 09:06:29 2016
+interactif Thu Dec 15 09:06:30 2016
+interactif Thu Dec 15 09:06:30 2016
+interactif Thu Dec 15 09:06:31 2016
+interactif Thu Dec 15 09:06:31 2016
+dynamique Thu Dec 15 09:06:32 2016
+image1 Thu Dec 15 09:06:33 2016
+statique dynamique Thu Dec 15 09:08:22 2016
+interactif Thu Dec 15 09:08:23 2016
+image3 Thu Dec 15 09:08:24 2016
+statique image5 Thu Dec 15 09:08:25 2016
+statique image1 Thu Dec 15 09:08:27 2016
+statique dynamique Thu Dec 15 09:08:28 2016
