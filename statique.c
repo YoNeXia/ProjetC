@@ -156,7 +156,7 @@ char touche(){
    system("setterm -cursor off");  
    while(1)
    {
-       if (touche) // 32 pour la barre espace
+       if (touche == 32) // 32 pour la barre espace
        {
            system("clear");
            system("setterm -cursor on");
